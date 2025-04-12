@@ -1,0 +1,10 @@
+
+
+# Node.js
+backend/node_modules/
+backend/ReadME/
+
+
+frontend/
+frontend/node_modules/
+frontend/build/
