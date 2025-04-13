@@ -3,7 +3,7 @@
 # Node.js
 backend/node_modules/
 backend/ReadME/
-
+backend/.env
 
 frontend/
 frontend/node_modules/
