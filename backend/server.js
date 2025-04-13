@@ -5,16 +5,16 @@ const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
 require("./db.js"); // Import the database connection file
+require("dotenv").config();
 
 app.use(cors());
 
 app.use(bodyParser.json());
-const port = 8000;
+// const port = 8000;
 
 app.get("/", (req, res) => {
   res.send("welcome to my hotel how can we help u");
 });
-
 
 const personRoutes = require("./routes/personRoutes");
 const menuRoutes = require("./routes/menuRoutes");
@@ -22,10 +22,11 @@ const menuRoutes = require("./routes/menuRoutes");
 app.use("/menuitems", menuRoutes);
 app.use("/person", personRoutes);
 
-app.listen(port, () => {
-  console.log("app is listning on the" + port);
-});
+const PORT = process.env.PORT || 8000;
 
+app.listen(PORT, () => {
+  console.log("app is listning on the" + PORT);
+});
 
 
 
